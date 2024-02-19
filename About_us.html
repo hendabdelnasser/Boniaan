@@ -1,0 +1,394 @@
+<!DOCTYPE html>ِِِِِِِِِِِِِِ
+<html dir="rtl"  class="scroll-auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Boniaan</title>
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+<style>
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #7E48FF;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+outubeBtn{
+    position: fixed;
+    left: 50%;
+  transform:translatex(-50%);
+    bottom: 45px;
+    cursor: pointer;
+    transition: all .3s;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+</style>
+
+</head>
+<body class="bg-white dark:bg-slate-900 ">
+ 
+
+<!--     ------------------navbar-------------
+ --> 
+
+ <nav class="sticky">
+
+  <div class="bg-[#7E48FF] w-[1350px] md:w-[62rem] lg:w-[84.5rem] h-[770px]">
+   
+    <div class="flex w-[550px] mr-[50rem]  top-[223.69px]   h-[48rem]">
+    </div>
+    
+      <div class="  mr-[5rem] mt-[-30rem]   w-20 ml-[25rem]  lg:mt-[-47rem]  ">
+      </div>
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mr-[20rem] -mt-10">
+      <div class="-mr-[16rem]">
+        <img src="/public/images/Logo Web.png " class="w-20 " alt=""  >
+        </div>
+      <div class="flex justify-center items-center space-x-6 ">
+       
+        <a href="./index.html" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 hover:text-sky-950 ml-6" >الرئيسية</a>
+
+        <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="flex items-center py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0" type="button">الأقسام<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+             
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+              
+          </div>
+         
+          <a href="./About_us.html" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0 ">من نحن</a>
+
+          <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">الدورات التعليمية</a>
+
+          <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">المدونة</a>
+
+            <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">آراء العملاء</a> 
+        
+       
+          
+      </div>
+      <div class="flex ml-10">
+        
+        <div class="search-box ml-5">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder="Type to Search...">
+          </div>
+        
+        
+        <button type="button" class="text-white  border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">تسجيل دخول <i class="fa-regular fa-user"></i></button>
+        </div>    
+    </div>
+<div class="flex">
+    <div class="mt-[190px] mr-[3rem]">
+      <h4 class=" mr-10 text-[#E0D3FF] w-[104px] font-customFont text-xl">مرحبا بك بنيان</h4>
+      <div class="flex space-x-6 mr-10">
+      <h3 class="mt-[10px]  text-[#FFFFFF] font-bold font-customFont text-5xl ">طور مهاراتك </h3>
+        <img src="./public/images/right.png" class="" alt="">
+      
+      </div>
+      
+      <h3 class="mt-[10px] mr-10 text-[#FFFFFF] font-bold font-customFont text-5xl ">وابنِ مستقبلك المهني  </h3>
+      <img class="mr-4 mt-[-1rem]" src="./public/images/bundle os x cursors.png" alt="">
+      <p class="text text-wrap ml-[200px]  mt-[-10px]  mr-14 text-right font-customFont text-[#E0D3FF]">في منصتنا، نؤمن بأن التعلم هو رحلة مستمرة،
+         ونسعى جاهدين لتوفير بيئة تعليمية داعمة وملهمة لكل فرد يسعى لتطوير نفسه
+      </p>
+
+    
+      </div>
+      <img src="./public/images/groupUS.jpg" class="w-[50rem] ml-24 h-[25rem] mt-[100px] rounded-xl opacity-50" alt="">
+    </div> 
+    <button type="button" class="text-white ml-2 pl-10 pr-10 mr-14 -mt-24 border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-[14px] px-4 py-3 text-center">تصفح الدورات</button>
+
+  </nav> 
+
+
+
+
+    </div>
+   <div class="mt-24">
+    <h3 class="text-center mt-14 font-customFont font-bold text-[#7E48FF]">لماذا تختارنا ؟</h3>
+    <p class="text-center text-4xl font-customFont font-bold mt-3">نقدم لك تجربة تعلم فريدة ومتكاملة</p>
+   </div>
+
+   <div class="flex mt-12 space-x-4 mr-28 mb-20">
+   <div class="w-64 bg-white border border-gray-200 rounded-lg ml-5 shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#" >
+        <img class="rounded-t-lg mr-24  w-[5rem]" src="./public/images/video-tutorial-1983742 1.png" alt="" />
+    </a>
+    <div class="p-5 w-[20rem]">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-right">برامج متنوعة</h5>
+        </a>
+        <p class=" font-normal text-gray-700 dark:text-gray-400  text-sm ml-11 text-center mt-5">اختر من مجموعة من البرامج تغطي مختلف المجالات والتخصصات </p>
+      
+    </div>
+  </div>
+
+  <div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg mr-24  w-[5rem]" src="./public/images/online-training-courses-1983727 1.png" alt="" />
+    </a>
+    <div class="p-5 w-[20rem]">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-right">مدربون محترفون</h5>
+        </a>
+        <p class=" font-normal text-gray-700 dark:text-gray-400 text-sm ml-14 text-center mt-5"> هيئة تدريس تمتلك خبرة غنية في مجالاتها</p>
+       
+    </div>
+  </div>
+  
+  <div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg mr-24  w-[5rem]" src="./public/images/video-tutorial-1983742 1.png" alt="" />
+    </a>
+    <div class="p-5 w-[20rem]">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-right">تقنيات تفاعلية</h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm ml-11 text-center mt-5">تفاعل مع المحتوى من خلال موارد تعلم حديثة وتفاعلية</p>
+       
+    </div>
+  </div>
+  
+  <div class="w-64 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <img class="rounded-t-lg mr-36   w-[5rem]" src="./public/images/left.png" alt="" />
+    </a>
+    <div class="p-5 w-[20rem]">
+        <a href="#">
+            <p class="mb-2 tracking-tight text-gray-900 dark:text-white  mr-11">انضم الينا في </p>
+        </a>
+        <h5 class="mb-3 font-customFont font-bold text-2xl  text-[#7E48FF] dark:text-gray-400  mr-5"> مجتمع التعلم ! </h5>
+        
+    </div>
+  </div>
+  </div>
+
+<div class="h-[637px] bg-[#221156] w-[1350px]">
+<div class="p-12 text-center">
+  <p class="font-customFont  text-[20px]  text-[#E0D3FF] font-bold">انجازتنا</p>
+  <h4 class="text-[40px] text-[#FFFFFF] font-customFont font-bold "> اهم انجازتنا في بنيان  </h4>
+</div>
+  <div class="flex -mt-28">
+  <img src="./public/images/Ar2.png" class="mr-[66rem] h-[600px]" alt="">
+  <img src="./public/images/Ar1.png" class="-mr-[31rem] h-[600px] w-[35rem]" alt="">
+  </div>
+
+  <div class="p-1 flex flex-wrap justify-center items-center pb-[20rem]  -mt-[28rem] w-full">
+    <a href="#" class="flex flex-col items-center  rounded-xl shadow md:flex-row md:max-w-xl md:ml-5 hover:bg-[#372568] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+      <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-[60px] md:mr-3 md:mt-5 md:mb-5 md:rounded-xl md:rounded-s-lg" src="./public/images/book 1.png" alt="">
+       
+    
+       <div class="flex flex-col justify-between p-4 leading-normal] space-x-4">
+       <div class="flex">
+           <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFFFFF] dark:text-white">220</h5>
+           <p class="text-[#FFFFFF] text-[13px] mt-2">برنامج</p>
+       </div>      
+               <p class=" text-[#CAC6D6] mr-3 text-[10px]"> تفاعلي مميز في بنيان  </p>
+               </div>      
+     </a>
+  
+     <a href="#" class="flex flex-col items-center  rounded-xl shadow md:flex-row md:max-w-xl md:ml-5 hover:bg-[#372568] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-[60px] md:mr-3 md:mt-5 md:mb-5 md:rounded-xl md:rounded-s-lg" src="./public/images/learning (1) 1.png" alt="">
+         
+      
+         <div class="flex flex-col justify-between p-4 leading-normal] space-x-4">
+         <div class="flex">
+             <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFFFFF] dark:text-white">220</h5>
+             <p class="text-[#FFFFFF] text-[13px] mt-2">برنامج</p>
+         </div>      
+                 <p class=" text-[#CAC6D6] mr-3 text-[10px]"> تفاعلي مميز في بنيان  </p>
+                 </div>      
+       </a>
+
+       <a href="#" class="flex flex-col items-center  rounded-xl shadow md:flex-row md:max-w-xl md:ml-5 hover:bg-[#372568] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-[60px] md:mr-3 md:mt-5 md:mb-5 md:rounded-xl md:rounded-s-lg" src="./public/images/g1900.png" alt="">
+         
+      
+         <div class="flex flex-col justify-between p-4 leading-normal] space-x-4">
+         <div class="flex">
+             <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFFFFF] dark:text-white">220</h5>
+             <p class="text-[#FFFFFF] text-[13px] mt-2">برنامج</p>
+         </div>      
+                 <p class=" text-[#CAC6D6] mr-3 text-[10px]"> تفاعلي مميز في بنيان  </p>
+                 </div>      
+       </a>
+       <a href="#" class="flex flex-col items-center  rounded-xl shadow md:flex-row md:max-w-xl md:ml-5 hover:bg-[#372568] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-[60px] md:mr-3 md:mt-5 md:mb-5 md:rounded-xl md:rounded-s-lg" src="./public/images/g2030.png" alt="">
+         
+      
+         <div class="flex flex-col justify-between p-4 leading-normal] space-x-4">
+         <div class="flex">
+             <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#FFFFFF] dark:text-white">100</h5>
+             <p class="text-[#FFFFFF] text-[13px] mt-2">برنامج</p>
+         </div>      
+                 <p class=" text-[#CAC6D6] mr-3 text-[10px]"> تفاعلي مميز في بنيان  </p>
+                 </div>      
+       </a>
+    
+  
+  
+   
+     </a>   
+  </div>
+</div>
+
+<section class="h-[10rem]">
+
+
+</section>
+
+<section class="bg-[#F7F8F8]">
+<div class="flex justify-center items-center  ">
+    <div class=" bg-[#1D155C] -mt-72 rounded-2xl  ">
+  <div class=" bg-[url('/public/images/boo.jpg')] rounded-2xl w-[800px] h-[500px] opacity-50 -mt-80">
+    <div class="flex  justify-center items-center mt-[15rem]">
+  <button type="button" class="text-[#221156] mt-[12rem]  bg-[#FFFFFF] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center hover:text-white"> 
+    <i class="fa-solid fa-play"></i></button>
+   
+  <h3 class=" mr-10 font-customFont text-[#FFFFFF] text-center ml-28 mt-[12rem] font-bold text-4xl">  
+    تعرف علينا أكثر  </h3>
+
+    </div>
+  </div>
+</div>
+</div>
+<footer>
+<div class="flex justify-center items-center mt-10 space-x-24">
+  <div class="flex flex-col w-64 ml-24">
+<div class="" >
+<img src="./public/images/logoGroup.png" class="text-right w-16" alt="">
+</div>
+<p class="text text-wrap text-[16px] text-[#838A91]">
+  في منصتنا، نؤمن بأن التعلم هو رحلة مستمرة، 
+  ونسعى جاهدين لتوفير بيئة تعليمية داعمة وملهمة لكل فرد يسعى لتطوير نفس
+</p>
+<div class="flex mt-5">
+  <button type="button" class="text-white ml-2 border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><i class="fa-solid fa-x"></i></button>
+  <button type="button" class="text-white ml-2 border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  <i class="fa-brands fa-instagram"></i></button>
+  <button type="button" class="text-white ml-2 border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  <i class="fa-brands fa-facebook"></i></button>
+  <button type="button" class="text-white ml-2 border-[#221156] bg-[#221156] hover:bg-[#130d27] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-3xl text-sm px-4 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">  <i class="fa-brands fa-linkedin"></i></button>
+
+</div>
+</div>
+<div >
+<h5 class="font-customFont font-bold text-[#1B191F] text-[20px]">عن الأكاديمية</h5>
+
+<a href="#" class="block py-2 px-3 text-[#838A91] rounded md:bg-transparent md:text-[#838A91] md:p-0 hover:text-sky-950 ml-6" >الرئيسية</a>
+ 
+  <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0 ">من نحن</a>
+
+  <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">الدورات التعليمية</a>
+
+  <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">المدونة</a>
+    <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">الدعم والمساعدة </a> 
+</div>
+<div >
+  <h5 class="font-customFont font-bold text-[#1B191F] text-[20px] mt-3"> الأقسام</h5>
+  
+  <a href="#" class="block py-2 px-3 text-[#838A91] rounded md:bg-transparent md:text-[#838A91] md:p-0 hover:text-sky-950 ml-6" >الابداع والتصميم</a> 
+    <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0 ">التسويق الالكتروني </a>
+    <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">صناعة المحتوى </a> 
+    <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">التنمية الذاتية</a>
+      <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0">الدعم والمساعدة </a> 
+      <a href="#" class="block py-2 px-3 text-slate-400  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:hover:text-violet-950  md:p-0"> ادارة الأعمال  </a> 
+  </div>
+<div>
+  <h5 class="font-customFont font-bold text-[#1B191F] text-[20px]  "> اشترك في النشرة البريدية</h5>
+
+
+
+
+
+<form class="flex items-center">   
+  <label for="voice-search" class="sr-only">Search</label>
+  <div class="relative w-full">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+      </div>
+      <input type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="البريد الالكتروني" required>
+      <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+      </button>
+  </div>
+  <button type="submit" class="inline-flex items-center mt-[7rem] -mr-40  ml-2 text-sm font-medium text-[#FFFFFF] bg-[#7E48FF] rounded-3xl pl-10 pr-10 px-2 py-2 hover:bg-[#8b63e9] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    اشتراك
+  </button>
+</form>
+</div>  
+</div>
+<div>
+  <p class="text-center mt-10 text-[16px] font-customFont text-[#5D666F]">الحقوق محفوظة ©2024 أكاديمية بنيان</p>
+</div>
+</footer>
+</section>
+</body>
+</html>
